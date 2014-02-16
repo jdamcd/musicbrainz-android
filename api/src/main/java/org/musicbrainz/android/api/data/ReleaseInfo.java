@@ -84,12 +84,12 @@ public class ReleaseInfo implements Comparable<ReleaseInfo> {
         formats.add(format);
     }
 
-  @Override
-  public boolean equals(Object obj) {
-    return (obj instanceof ReleaseInfo) && compareTo((ReleaseInfo) obj) == 0;
-  }
+    @Override
+    public boolean equals(Object obj) {
+        return (obj instanceof ReleaseInfo) && compareTo((ReleaseInfo) obj) == 0;
+    }
 
-  @Override
+    @Override
     public int compareTo(ReleaseInfo another) {
         int artistNameComparison = getArtists().get(0).compareTo(another.getArtists().get(0));
         if (artistNameComparison != 0) {

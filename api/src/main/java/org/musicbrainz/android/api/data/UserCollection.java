@@ -21,6 +21,6 @@ public class UserCollection extends UserCollectionInfo {
 	}
 
   public void addReleases(Collection<ReleaseInfo> releases) {
-    this.releases.addAll(releases);
+      this.releases.addAll(releases);
   }
 }
