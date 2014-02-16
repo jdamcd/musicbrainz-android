@@ -20,7 +20,7 @@ public class UserCollection extends UserCollectionInfo {
 	    this.releases.add(release);
 	}
 
-  public void addReleases(Collection<ReleaseInfo> releases) {
-      this.releases.addAll(releases);
-  }
+        public void addReleases(Collection<ReleaseInfo> releases) {
+            this.releases.addAll(releases);
+        }
 }
