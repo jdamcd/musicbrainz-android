@@ -261,10 +261,21 @@ public class MusicBrainzWebClient implements MusicBrainz {
     }
 
     @Override
-    public UserCollection lookupCollection(String mbid) throws IOException {
-        HttpEntity entity = get(QueryBuilder.collectionLookup(mbid));
-        UserCollection collection = responseParser.parseCollectionLookup(entity.getContent());
-        entity.consumeContent();
+    public UserCollection lookupCollection(String mbid, int collectionSize) throws IOException {
+        int offset = 0;
+        UserCollection collection = null;
+        while (offset < collectionSize) {
+            HttpEntity entity = get(QueryBuilder.collectionLookup(mbid, offset));
+            UserCollection partialCollection = responseParser.parseCollectionLookup(entity.getContent());
+            entity.consumeContent();
+            if (collection == null) {
+                collection = partialCollection;
+            }
+            else {
+                collection.addReleases(partialCollection.getReleases());
+            }
+            offset = collection.getReleases().size();
+        }
         return collection;
     }
 

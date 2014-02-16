@@ -100,7 +100,8 @@ public class CollectionListFragment extends ListFragment implements
         CollectionListAdapter adapter = (CollectionListAdapter) getListAdapter();
         String title = adapter.getItem(position).getName();
         String mbid = adapter.getItem(position).getMbid();
-        startActivity(IntentFactory.getCollection(appContext, title, mbid));
+        int size = adapter.getItem(position).getCount();
+        startActivity(IntentFactory.getCollection(appContext, title, mbid, size));
     }
 
 }
