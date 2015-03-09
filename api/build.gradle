@@ -1,4 +1,8 @@
 apply plugin: 'java'
+apply plugin: 'maven'
+
+group = "org.musicbrainz.mobile"
+version = "1.0-SNAPSHOT"
 
 jar
 
