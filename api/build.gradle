@@ -4,6 +4,9 @@ apply plugin: 'maven'
 group = "org.musicbrainz.mobile"
 version = "1.0-SNAPSHOT"
 
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
 jar
 
 dependencies {
