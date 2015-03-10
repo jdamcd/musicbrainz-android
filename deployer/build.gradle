@@ -1,0 +1,13 @@
+apply plugin: 'maven-publish'
+
+publishing {
+	publications {
+		maven(MavenPublication) {
+			groupId 'com.paypal'
+			artifactId 'mpl'
+			version '1.5.5.45'
+			artifact 'PayPal_MPL-1.5.5.45.jar'
+		}
+	}
+}
+
