@@ -35,12 +35,14 @@ android {
 }
 
 dependencies {
+	compile project(':api')
 	compile 'com.android.support:support-v4:21.0.0'
 	compile 'org.musicbrainz.mobile:api:1.0-SNAPSHOT'
 	compile 'com.novoda.imageloader:imageloader-core:1.5.7'
 	compile 'com.google.code.gson:gson:2.2.4'
-	// Custom paypal mpl installed by :deployer
-	compile 'com.paypal:mpl:1.5.5.45'
+	// Paypal MPL jar is added in this way. Doing this via maven repo was
+	// becoming too troublesome
+	compile rootProject.files('deployer/PayPal_MPL-1.5.5.45.jar')
 	// Bugsense has been replaced by splunk mint
 	compile 'com.splunk.mint:mint:3.6'
 	compile 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
