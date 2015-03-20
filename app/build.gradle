@@ -63,3 +63,10 @@ dependencies {
 	androidTestCompile 'com.google.android:android-test:4.1.1.4'
 	androidTestCompile 'com.jayway.android.robotium:robotium-solo:4.1'
 }
+
+// remove conflicts between httpclient of android and httpclient of subproject
+// api
+configurations {
+	    all*.exclude group: 'org.apache.httpcomponents', module: 'httpclient'
+}
+
