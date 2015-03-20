@@ -21,11 +21,18 @@ android {
 			res.srcDirs = ['res']
 			manifest.srcFile 'AndroidManifest.xml'
 		}
+		androidTest.setRoot('../instrumentation')
+		androidTest {
+			java.srcDirs = ['../instrumentation/src']
+			manifest.srcFile '..instrumentation/AndroidManifest.xml'
+		}
+
 	}
 
 	defaultConfig {
 		applicationId "org.musicbrainz.mobile"
-		minSdkVersion 7
+//		minSdkVersion 7
+		minSdkVersion 15
 		targetSdkVersion 17
 		versionCode 17
 		versionName "1.3.4"
@@ -53,4 +60,6 @@ dependencies {
 	// viewpagerindicator by Jake Wharton does not contain aar version
 	// this repo repackages the apklib provided in the original to aar
 	compile 'fr.avianey.com.viewpagerindicator:library:2.4.1@aar'
+	androidTestCompile 'com.google.android:android-test:4.1.1.4'
+	androidTestCompile 'com.jayway.android.robotium:robotium-solo:4.1'
 }
