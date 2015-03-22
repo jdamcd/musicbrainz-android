@@ -4,13 +4,10 @@ apply plugin: 'maven'
 group = "org.musicbrainz.mobile"
 version = "1.0-SNAPSHOT"
 
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
-
 jar
 
 dependencies {
-	compile 'org.apache.httpcomponents:httpclient:4.0.3'
-	testCompile 'junit:junit:4.11'
+    compile 'org.apache.httpcomponents:httpclient:4.0.3'
+    testCompile 'junit:junit:4.11'
 }
 
