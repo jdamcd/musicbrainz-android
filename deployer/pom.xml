@@ -28,7 +28,7 @@
               <groupId>com.paypal</groupId>
               <artifactId>mpl</artifactId>
               <packaging>jar</packaging>
-              <version>1.5.5.45</version>
+              <version>1.5.6.46</version>
               <file>PayPal_MPL-1.5.6.46.jar</file>
             </configuration>
           </execution>
