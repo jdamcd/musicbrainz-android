@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.0.0"
+
+    defaultConfig {
+        applicationId "org.musicbrainz.mobile"
+        minSdkVersion 7
+        targetSdkVersion 17
+        versionCode 18
+        versionName "1.3.5"
+    }
+
+    sourceSets {
+        main {
+            java.srcDirs = ['src']
+            assets.srcDirs = ['assets']
+            res.srcDirs = ['res']
+            manifest.srcFile 'AndroidManifest.xml'
+        }
+        androidTest.setRoot('../instrumentation')
+        androidTest {
+            java.srcDirs = ['../instrumentation/src']
+            manifest.srcFile '..instrumentation/AndroidManifest.xml'
+        }
+
+    }
+
+    android {
+        lintOptions {
+            abortOnError false
+        }
+    }
+}
+
+dependencies {
+    compile project(':api')
+    compile rootProject.files('deployer/PayPal_MPL-1.5.6.46.jar')
+    compile 'com.android.support:support-v4:21.0.0'
+    compile 'org.musicbrainz.mobile:api:1.0-SNAPSHOT'
+    compile 'com.novoda.imageloader:imageloader-core:1.5.7'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
+    compile 'fr.avianey.com.viewpagerindicator:library:2.4.1@aar'
+
+    androidTestCompile 'com.jayway.android.robotium:robotium-solo:4.1'
+}
+
+configurations {
+    all*.exclude group: 'org.apache.httpcomponents', module: 'httpclient'
+}
+

@@ -1,0 +1,1 @@
+include ':deployer', ':api', ':app', ':instrumentation'
