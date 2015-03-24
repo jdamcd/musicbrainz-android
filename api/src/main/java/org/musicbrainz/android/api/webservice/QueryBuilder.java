@@ -35,6 +35,7 @@ public class QueryBuilder {
     private static final String LOOKUP_USER_COLLECTIONS = "collection?limit=100";
     private static final String COLLECTION = "collection/";
     private static final String COLLECTION_LIST = "/releases?inc=releases+artist-credits&limit=100";
+    private static final String COLLECTION_OFFSET = "&offset=";
     private static final String COLLECTION_EDIT = "/releases/";;
 
     private static final String TAG_PARAMS = "?inc=tags";
@@ -133,8 +134,8 @@ public class QueryBuilder {
         return buildQuery(LOOKUP_USER_COLLECTIONS);
     }
     
-    public static String collectionLookup(String collectionMbid) {
-        return buildQuery(COLLECTION + collectionMbid + COLLECTION_LIST);
+    public static String collectionLookup(String collectionMbid, int offset) {
+        return buildQuery(COLLECTION + collectionMbid + COLLECTION_LIST + COLLECTION_OFFSET + offset);
     }
     
     public static String collectionEdit(String collectionMbid, String releaseMbid, String clientId) {

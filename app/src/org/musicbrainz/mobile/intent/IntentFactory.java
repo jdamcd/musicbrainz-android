@@ -20,6 +20,9 @@ public class IntentFactory {
         public static final String RELEASE_MBID = "release_mbid";
         public static final String RG_MBID = "rg_mbid";
         public static final String COLLECTION_MBID = "collection_mbid";
+        public static final String COLLECTION_SIZE = "collection_size";
+        public static final int DEFAULT_COLLECTION_SIZE = 100;
+
         public static final String BARCODE = "barcode";
 
         public static final String TYPE = "type";
@@ -53,10 +56,11 @@ public class IntentFactory {
         return intent;
     }
 
-    public static Intent getCollection(Context context, String title, String mbid) {
+    public static Intent getCollection(Context context, String title, String mbid, int size) {
         Intent intent = new Intent(context, CollectionActivity.class);
         intent.putExtra(Extra.TITLE, title);
         intent.putExtra(Extra.COLLECTION_MBID, mbid);
+        intent.putExtra(Extra.COLLECTION_SIZE, size);
         return intent;
     }
     

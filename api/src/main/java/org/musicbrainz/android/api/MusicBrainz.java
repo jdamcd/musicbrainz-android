@@ -72,6 +72,6 @@ public interface MusicBrainz {
     void addReleaseToCollection(String collectionMbid, String releaseMbid) throws IOException;
     void deleteReleaseFromCollection(String collectionMbid, String releaseMbid) throws IOException;
     List<UserCollectionInfo> lookupUserCollections() throws IOException;
-    UserCollection lookupCollection(String mbid) throws IOException;
+    UserCollection lookupCollection(String mbid, int collectionSize) throws IOException;
 
 }
