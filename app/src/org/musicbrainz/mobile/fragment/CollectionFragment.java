@@ -1,5 +1,7 @@
 package org.musicbrainz.mobile.fragment;
 
+import java.util.ArrayList;
+
 import org.musicbrainz.android.api.data.UserCollection;
 import org.musicbrainz.android.api.data.ReleaseInfo;
 import org.musicbrainz.mobile.R;
@@ -40,6 +42,7 @@ public class CollectionFragment extends SherlockListFragment {
 
     private Context appContext;
     private String mbid;
+    private int size;
     private View loading;
     private View error;
     private FragmentLoadingCallbacks activityCallbacks;
@@ -60,6 +63,7 @@ public class CollectionFragment extends SherlockListFragment {
         super.onAttach(activity);
         appContext = activity.getApplicationContext();
         mbid = activity.getIntent().getStringExtra(Extra.COLLECTION_MBID);
+        size = activity.getIntent().getIntExtra(Extra.COLLECTION_SIZE, Extra.DEFAULT_COLLECTION_SIZE);
         try {
             activityCallbacks = (FragmentLoadingCallbacks) activity;
         } catch (ClassCastException e) {
@@ -89,7 +93,7 @@ public class CollectionFragment extends SherlockListFragment {
         case SUCCESS:
             UserCollection collection = result.getData();
             setListAdapter(new ReleaseInfoAdapter(getActivity(), R.layout.list_collection_release,
-                    collection.getReleases()));
+                    new ArrayList<ReleaseInfo>(collection.getReleases())));
             break;
         case EXCEPTION:
             showConnectionErrorWarning();
@@ -143,7 +147,7 @@ public class CollectionFragment extends SherlockListFragment {
 
         @Override
         public Loader<AsyncResult<UserCollection>> onCreateLoader(int id, Bundle args) {
-            return new CollectionLoader(mbid);
+            return new CollectionLoader(mbid, size);
         }
 
         @Override

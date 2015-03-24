@@ -1,23 +1,26 @@
 package org.musicbrainz.android.api.data;
 
-import java.util.Collections;
-import java.util.LinkedList;
+import java.util.Collection;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 public class UserCollection extends UserCollectionInfo {
 	
-	private LinkedList<ReleaseInfo> releases = new LinkedList<ReleaseInfo>();
+	private SortedSet<ReleaseInfo> releases = new TreeSet<ReleaseInfo>();
 
-	public LinkedList<ReleaseInfo> getReleases() {
-	    Collections.sort(releases);
+	public SortedSet<ReleaseInfo> getReleases() {
 		return releases;
 	}
 
-	public void setReleases(LinkedList<ReleaseInfo> releases) {
+	public void setReleases(SortedSet<ReleaseInfo> releases) {
 		this.releases = releases;
 	}
 	
 	public void addRelease(ReleaseInfo release) {
-	    releases.add(release);
+	    this.releases.add(release);
 	}
 
+        public void addReleases(Collection<ReleaseInfo> releases) {
+            this.releases.addAll(releases);
+        }
 }

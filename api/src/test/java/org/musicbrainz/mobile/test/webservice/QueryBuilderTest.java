@@ -122,8 +122,8 @@ public class QueryBuilderTest {
 
     @Test
     public void collectionLookup() {
-        String expected = "http://musicbrainz.org/ws/2/collection/c6f9fb72-e233-47f4-a2f6-19f16442d93a/releases?inc=releases+artist-credits&limit=100";
-        String actual = QueryBuilder.collectionLookup("c6f9fb72-e233-47f4-a2f6-19f16442d93a");
+        String expected = "http://musicbrainz.org/ws/2/collection/c6f9fb72-e233-47f4-a2f6-19f16442d93a/releases?inc=releases+artist-credits&limit=100&offset=50";
+        String actual = QueryBuilder.collectionLookup("c6f9fb72-e233-47f4-a2f6-19f16442d93a", 50);
         assertEquals(expected, actual);
     }
 

@@ -85,21 +85,36 @@ public class ReleaseInfo implements Comparable<ReleaseInfo> {
     }
 
     @Override
+    public boolean equals(Object obj) {
+        return (obj instanceof ReleaseInfo) && compareTo((ReleaseInfo) obj) == 0;
+    }
+
+    @Override
     public int compareTo(ReleaseInfo another) {
         int artistNameComparison = getArtists().get(0).compareTo(another.getArtists().get(0));
         if (artistNameComparison != 0) {
             return artistNameComparison;
         }
 
+        int dateComparison;
         if (getDate() == null && another.getDate() == null) {
-            return 0;
+            dateComparison = 0;
         } else if (getDate() == null) {
-            return 1;
+            dateComparison = 1;
         } else if (another.getDate() == null) {
-            return -1;
+            dateComparison = -1;
         } else {
-            return getDate().compareTo(another.getDate());
+            dateComparison = getDate().compareTo(another.getDate());
         }
+        if (dateComparison != 0) {
+          return dateComparison;
+        }
+
+        int titleComparison = getTitle().compareToIgnoreCase(another.getTitle());
+        if (titleComparison != 0) {
+            return titleComparison;
+        }
+        return getReleaseMbid().compareTo(another.getReleaseMbid());
     }
 
 }

@@ -12,16 +12,18 @@ public class CollectionLoader extends PersistingAsyncTaskLoader<AsyncResult<User
 
     private MusicBrainz client;
     private String mbid;
+    private int size;
     
-    public CollectionLoader(String mbid) {
+    public CollectionLoader(String mbid, int size) {
         client = App.getWebClient();
         this.mbid = mbid;
+        this.size = size;
     }
     
     @Override
     public AsyncResult<UserCollection> loadInBackground() {
         try {
-            data = new AsyncResult<UserCollection>(LoaderStatus.SUCCESS, client.lookupCollection(mbid));
+            data = new AsyncResult<UserCollection>(LoaderStatus.SUCCESS, client.lookupCollection(mbid, size));
             return data;
         } catch (IOException e) {
             return new AsyncResult<UserCollection>(LoaderStatus.EXCEPTION, e);

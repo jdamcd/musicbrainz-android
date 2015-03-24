@@ -41,7 +41,7 @@ public class CollectionHandler extends MBHandler {
             inArtist = true;
             releaseArtist = new ReleaseArtist();
             releaseArtist.setMbid(atts.getValue("id"));
-        } else if (localName.equals("sort-name")) {
+        } else if (localName.equals("sort-name") && inArtist) {
             buildString();
         }
     }
@@ -65,7 +65,7 @@ public class CollectionHandler extends MBHandler {
             release.setCountryCode(getString());
         } else if (localName.equals("artist")) {
             inArtist = false;
-        } else if (localName.equals("sort-name")) {
+        } else if (localName.equals("sort-name") && inArtist) {
             releaseArtist.setSortName(getString());
         }
     }
