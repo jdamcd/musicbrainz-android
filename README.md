@@ -25,48 +25,38 @@ Code contributions are welcomed in the form of [pull requests](https://help.gith
 
 A code formatting configuration file is included in the repo.
 
-### Building with Maven
-
-If you have Maven 3, the Android SDK and an ```ANDROID_HOME``` environment variable, you can simply build with:
-
-    $mvn clean install
-
-This expects an Android device to be attached for running instrumentation tests. Alternatively, use the ```-DskipTests``` option.
-
-### IntelliJ project setup
-
-Import as existing Maven project. Just works.
-
-### Can I skip all this Maven stuff?
-
-Yes. However, you'll need to look at the dependencies in the POMs and go hunting for the dependencies yourself.
-
 ### Building with gradle
 
-For building with gradle (checked with gradle v2.2.1), follow these steps:
+For building with gradle, follow the steps. Gradle wrapper downloads the
+required gradle version and dependencies and builds the application.  For
+reference, the gradle version used is 2.2.1.  For windows, replace ` ./gradlew `
+with `./gradlew.bat`.
 
 1. Install the Musicbrainz api jar to local maven repository using
 
-        $ gradle install
+        $ ./gradlew install
 
 2. Now follow one of these in order to build the android application
 
   1. For building the android apk, installing it to emulator/device and to run instrumentation checks
 
-            $ gradle connectedAndroidTest
+            $ ./gradlew connectedAndroidTest
 
   2. For building the android apk and installing it to emulator/device :
 
-            $ gradle installDebug
+            $ ./gradlew installDebug
 
   3. For building the android apk :
 
-            $ gradle build
+            $ ./gradlew build
 
 3. To clean the build files :
 
         $ gradle clean
 
-4. Gradle build does not need paypal jar to be installed in local maven repository. But if still one needs to do it, run
+### Android Studio
 
-        $ gradle publishToMavenLocal
+Import project (gradle) and you are set.
+
+(Tested with Android Studio 1.1.0 Build 135.1740770)
+
