@@ -1,1 +1,2 @@
-include ':deployer', ':api', ':app', ':instrumentation'
+include ':api'
+include ':app'
