@@ -33,6 +33,8 @@ public class ArtistBioLoader extends PersistingAsyncTaskLoader<ArtistBio> {
             return null;
         } catch (IllegalStateException ise) {
             return null;
+        } catch (NullPointerException ne) {
+            return null;
         }
     }
 

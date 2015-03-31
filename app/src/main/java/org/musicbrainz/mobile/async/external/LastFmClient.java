@@ -19,6 +19,9 @@ public class LastFmClient extends SimpleWebClient {
         InputStream stream = getConnection(buildArtistInfoUrl(mbid));
         LastFmArtist artist = parseResult(stream);
         stream.close();
+        if (artist == null) {
+            throw new NullPointerException();
+        }
         return artist;
     }
 
