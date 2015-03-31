@@ -1,0 +1,20 @@
+language: android
+jdk: oraclejdk7
+env:
+  matrix:
+    - ANDROID_TARGET=android-21 ANDROID_ABI=armeabi-v7a
+
+android:
+  components:
+    - platform-tools
+    - build-tools-21.0.0
+    - android-21
+    - add-on
+    - extra
+    - sys-img-armeabi-v7a-android-21
+
+before_script:
+  - echo no | android create avd --force -n test -t android-19 --abi armeabi-v7a
+  - emulator -avd test -no-skin -no-audio -no-window &
+  - android-wait-for-emulator
+  - adb shell input keyevent 82 &
