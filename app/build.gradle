@@ -28,7 +28,7 @@ dependencies {
     compile 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
     compile 'fr.avianey.com.viewpagerindicator:library:2.4.1@aar'
 
-    androidTestCompile 'com.jayway.android.robotium:robotium-solo:4.1'
+    androidTestCompile 'com.jayway.android.robotium:robotium-solo:4.3.1'
 }
 
 configurations {
