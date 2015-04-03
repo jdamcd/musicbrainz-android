@@ -41,3 +41,13 @@ local.properties
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Backup files made by editors
+# gedit
+*~
+# vim
+*.swp
+
+# Patch files by git
+*.patch
+
