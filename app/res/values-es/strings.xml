@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+  <string name="app_name">MusicBrainz</string>
+
+  <!-- DashboardActivity -->
+  <string name="search_hint">Buscar en MusicBrainz</string>
+  <string name="description_search">Buscar</string>
+  <string name="dash_scan">Escanear</string>
+  <string name="dash_collections">Colecciones</string>
+  <string name="dash_donate">Donar</string>
+  <string name="dash_about">Acerca</string>
+  <string name="login">Iniciar sesión</string>
+  <string name="logout">Cerrar sesión</string>
+  <string name="welcome">¡Bienvenido a MusicBrainz!</string>
+  <string name="welcome_loggedin">Iniciado como</string>
+
+  <string name="searchtype_artist">Artista</string>
+  <string name="searchtype_release" toBeTranslated="true">Release</string>
+  <string name="searchtype_label">Etiqueta</string>
+  <string name="searchtype_recording">Grabación</string>
+
+  <!-- Searchable -->
+  <string name="search_name">MusicBrainz</string>
+  <string name="search_description" toBeTranslated="true">Artists and releases</string>
+
+  <!-- LoginActivity -->
+  <string name="auth_title" toBeTranslated="true">Log In</string>
+  <string name="uname_hint">Nombre de usuario</string>
+  <string name="pass_hint">Contraseña</string>
+  <string name="register_text">¿Necesita registrarse?</string>
+  <string name="forgotpass_text">¿Olvidó su contraseña?</string>
+  <string name="pd_authenticating">Autenticando…</string>
+  <string name="login_failure_warning">Usuario o contraseña no válido.</string>
+  <string name="login_connection_warning">Fallo en la conexión.</string>
+  <string name="description_web">Enlace web</string>
+
+  <!-- SearchResultsActivity -->
+  <string name="no_results">No se encontraron resultados</string>
+  <string name="search_bar_artists">Artistas</string>
+  <string name="search_bar_rgs" toBeTranslated="true">Releases</string>
+
+  <!-- ReleaseActivity -->
+  <string name="release_title" toBeTranslated="true">Release</string>
+  <string name="label_tracks">pistas</string>
+  <string name="no_tags">No se encontraron etiquetas</string>
+  <string name="edit_login">¡Debe iniciar sesión antes de editar!</string>
+
+  <string name="collection_add_fail" toBeTranslated="true">Failed adding release to collection</string>
+  <string name="collection_add_success">Añadido a la colección</string>
+  <string name="collection_dialog_title">Añadir a la colección</string>
+
+  <string name="cover_art_front">FRONTAL</string>
+  <string name="cover_art_back">TRASERA</string>
+
+  <!-- ArtistActivity -->
+  <string name="artist_title">Artista</string>
+  <string name="noreleases" toBeTranslated="true">No releases found</string>
+  <string name="no_links" toBeTranslated="true">No links found</string>
+
+  <!-- BioFragment -->
+  <string name="bio_powered_by" toBeTranslated="true">BIO POWERED BY</string>
+  <string name="bio_empty">No se encontró biografía.</string>
+  <string name="bio_connection_fail">No se pudo descargar biografía.</string>
+
+  <!-- CollectionsActivity -->
+  <string name="collections_title">Colecciones</string>
+  <string name="plural" toBeTranslated="true">\'s</string>
+  <string name="collections">colecciones</string>
+
+  <plurals name="release_plurals">
+    <item quantity="zero" toBeTranslated="true">No releases</item>
+    <item quantity="one" toBeTranslated="true">%d release</item>
+    <item quantity="other" toBeTranslated="true">%d releases</item>
+  </plurals>
+
+  <string name="no_collections" toBeTranslated="true">You don\'t have any collections.\nAdd collections at musicbrainz.org</string>
+  <string name="no_collection_releases" toBeTranslated="true">No releases in this collection.\nSearch for releases to add them.</string>
+  <string name="collection_remove_fail" toBeTranslated="true">Failed to remove release</string>
+
+  <!-- Pager tabs -->
+  <string name="tab_links" toBeTranslated="true">MORE</string>
+  <string name="tab_releases" toBeTranslated="true">RELEASES</string>
+  <string name="tab_bio" toBeTranslated="true">BIO</string>
+  <string name="tab_edits" toBeTranslated="true">TAG &amp; RATE</string>
+  <string name="tab_tracks" toBeTranslated="true">TRACKS</string>
+  <string name="tab_cover_art" toBeTranslated="true">COVER ART</string>
+  <string name="results_artists" toBeTranslated="true">ARTISTS</string>
+  <string name="results_releases" toBeTranslated="true">RELEASES</string>
+
+  <!-- Edit tabs -->
+  <string name="tag_hint" toBeTranslated="true">Tag</string>
+
+  <!-- BarcodeSearchActivity -->
+  <string name="barcodesearch_title">Enviar código de barras</string>
+  <string name="barcode_text" toBeTranslated="true">BARCODE</string>
+  <string name="barcode_release_text" toBeTranslated="true">RELEASE</string>
+  <string name="barcode_hint" toBeTranslated="true">Search release</string>
+  <string name="barcode_instructions" toBeTranslated="true">Search for release to add barcode.</string>
+  <string name="barcode_invalid_length" toBeTranslated="true">Expected 12 digits for UPC or 13 digits for EAN</string>
+  <string name="barcode_invalid_chars" toBeTranslated="true">Should only contain digits</string>
+
+  <!-- ConfirmBarcodeDialog -->
+  <string name="barcode_add_header">¿Enviar código de barras?</string>
+  <string name="barcode_add_info" toBeTranslated="true">This will submit an edit for peer review. The barcode will not be added immediately.</string>
+  <string name="barcode_add_btn">Enviar</string>
+
+  <!-- DonateActivity -->
+  <string name="donate_title">Donar</string>
+  <string name="donate_header">Apoye a MetaBrainz Foundation</string>
+  <string name="donate_text" toBeTranslated="true">You can donate via PayPal to the non-profit MetaBrainz Foundation, which operates the MusicBrainz
+    project.</string>
+  <string name="paypal_loading_label">Cargando PayPal…</string>
+  <string name="paypal_loading_timeout" toBeTranslated="true">Connection failure</string>
+  <string name="donate_or" toBeTranslated="true">\u2014\u0020  OR  \u0020\u2014</string>
+  <string name="alt_donate_text" toBeTranslated="true">View other options…</string>
+  <string name="starting_paypal" toBeTranslated="true">PayPal is starting…\nPlease bear with us.</string>
+
+  <!-- AboutActivity -->
+  <string name="about_title">Acerca</string>
+  <string name="app_name_official" toBeTranslated="true">MusicBrainz Android</string>
+  <string name="version_text">Versión</string>
+
+  <!-- WebView Activity titles -->
+  <string name="web_forgot_pass">Olvidó contraseña</string>
+  <string name="web_register">Registrar</string>
+  <string name="web_donate">Opciones de donación</string>
+
+  <!-- IntentError -->
+  <string name="intent_error" toBeTranslated="true">Invalid URI for MusicBrainz Intent</string>
+
+  <!-- Actions -->
+  <string name="action_share">Compartir</string>
+  <string name="action_refresh">Actualizar</string>
+  <string name="action_search">Buscar</string>
+  <string name="action_add_collection">Añadir a colección</string>
+  <string name="action_remove_collection">Quitar de colección</string>
+  <string name="action_feedback" toBeTranslated="true">Feedback</string>
+  <string name="action_settings">Ajustes</string>
+  <string name="action_login" toBeTranslated="true">Log In</string>
+  <string name="action_logout" toBeTranslated="true">Log Out</string>
+
+  <!-- Preferences -->
+  <string name="preferences_title">Ajustes</string>
+  <string name="settings_search">Buscar</string>
+  <string name="settings_suggestions">Sugerencias</string>
+  <string name="settings_suggestions_summary">Guardar y mostrar sugerencias de búsqueda</string>
+  <string name="settings_clear">Borrar historial de búsqueda</string>
+  <string name="settings_other" toBeTranslated="true">Other</string>
+  <string name="settings_bugsense">¿Enviar informes de fallo?</string>
+  <string name="settings_bugsense_summary" toBeTranslated="true">Allow anonymous error data to be sent</string>
+
+  <!-- Connection errors -->
+  <string name="err_text">Hubo un problema conectando al servidor. ¿Reintentar?</string>
+  <string name="err_pos">Sí</string>
+  <string name="err_neg">No</string>
+
+  <string name="connection_error">No se pudo conectar al servidor…</string>
+  <string name="connection_error_retry">Reintentar</string>
+
+  <!-- Toasts -->
+  <string name="toast_tag" toBeTranslated="true">Tags submitted</string>
+  <string name="toast_tag_fail" toBeTranslated="true">Tag submission failed</string>
+  <string name="toast_rate" toBeTranslated="true">Rating submitted</string>
+  <string name="toast_rate_fail" toBeTranslated="true">Rating submission failed</string>
+  <string name="toast_barcode" toBeTranslated="true">Barcode submitted</string>
+  <string name="toast_barcode_fail" toBeTranslated="true">Barcode submission failed</string>
+  <string name="toast_search_err" toBeTranslated="true">Add some text to search</string>
+  <string name="toast_tag_err" toBeTranslated="true">Add some text to tag</string>
+  <string name="toast_auth_err" toBeTranslated="true">Username or password missing</string>
+  <string name="toast_logged_in" toBeTranslated="true">Logged in</string>
+  <string name="toast_logged_out" toBeTranslated="true">Logged out</string>
+  <string name="toast_feedback_fail" toBeTranslated="true">No email client found</string>
+  <string name="toast_donate_success" toBeTranslated="true">Thanks you for supporting MusicBrainz!</string>
+  <string name="toast_donate_canceled" toBeTranslated="true">Donation canceled</string>
+  <string name="toast_search_cleared">Historial de búsqueda borrado</string>
+
+  <!-- ZXing integration -->
+  <string name="zx_title">Instalar Barcode Scanner?</string>
+  <string name="zx_message">Esta acción requiere Barcode Scanner. ¿Desea instalarlo?</string>
+  <string name="zx_pos">Instalar</string>
+  <string name="zx_neg">Cancelar</string>
+
+  <!-- BarcodeDialog -->
+  <string name="barcode_header" toBeTranslated="true">Barcode not found!</string>
+  <string name="barcode_info_log" toBeTranslated="true">This barcode is not associated with a MusicBrainz release. Would you like to add it?</string>
+  <string name="barcode_info_nolog" toBeTranslated="true">This barcode is not associated with a MusicBrainz release. Log in to add it.</string>
+  <string name="barcode_btn">Añadir código de barras</string>
+
+  <!-- ReleaseSelectionDialog -->
+  <string name="rg_title" toBeTranslated="true">Select a release</string>
+  <string name="rg_text" toBeTranslated="true">This has been released more than once. Choose a release from the list.</string>
+
+  <!-- Release group types -->
+  <string name="rt_album">Álbum</string>
+  <string name="rt_single">Sencillo</string>
+  <string name="rt_ep" toBeTranslated="true">EP</string>
+  <string name="rt_compilation">Recopilatorio</string>
+  <string name="rt_nat" toBeTranslated="true">NAT</string>
+  <string name="rt_soundtrack">Banda sonora</string>
+  <string name="rt_spokenword" toBeTranslated="true">Spoken word</string>
+  <string name="rt_interview">Entrevista</string>
+  <string name="rt_audiobook">Audiolibro</string>
+  <string name="rt_live">Directo</string>
+  <string name="rt_remix" toBeTranslated="true">Remix</string>
+  <string name="rt_other" toBeTranslated="true">Other</string>
+  <string name="rt_unknown" toBeTranslated="true">Unknown</string>
+
+  <!-- Release formats -->
+  <string name="fm_cd" toBeTranslated="true">CD</string>
+  <string name="fm_dvd" toBeTranslated="true">DVD</string>
+  <string name="fm_sacd" toBeTranslated="true">SACD</string>
+  <string name="fm_dd" toBeTranslated="true">DualDisc</string>
+  <string name="fm_ld" toBeTranslated="true">LaserDisc</string>
+  <string name="fm_md" toBeTranslated="true">MiniDisc</string>
+  <string name="fm_vinyl" toBeTranslated="true">Vinyl</string>
+  <string name="fm_cassette" toBeTranslated="true">Cassette</string>
+  <string name="fm_cartridge" toBeTranslated="true">Cartridge</string>
+  <string name="fm_rtr" toBeTranslated="true">Reel-to-reel</string>
+  <string name="fm_dat" toBeTranslated="true">DAT</string>
+  <string name="fm_dm" toBeTranslated="true">Digital Media</string>
+  <string name="fm_other" toBeTranslated="true">Other</string>
+  <string name="fm_wax" toBeTranslated="true">Wax Cylinder</string>
+  <string name="fm_pr" toBeTranslated="true">Piano Roll</string>
+  <string name="fm_dcc" toBeTranslated="true">Digital Compact Cassette</string>
+  <string name="fm_vhs" toBeTranslated="true">VHS</string>
+  <string name="fm_vcd" toBeTranslated="true">Video-CD</string>
+  <string name="fm_svcd" toBeTranslated="true">Super Video-CD</string>
+  <string name="fm_bm" toBeTranslated="true">Betamax</string>
+  <string name="fm_hdcd" toBeTranslated="true">HD Compatible Digital</string>
+  <string name="fm_usb" toBeTranslated="true">USB Flash Drive</string>
+  <string name="fm_sm" toBeTranslated="true">SlotMusic</string>
+  <string name="fm_umd" toBeTranslated="true">Universal Media Disc</string>
+  <string name="fm_hddvd" toBeTranslated="true">HD-DVD</string>
+  <string name="fm_dvda" toBeTranslated="true">DVD-Audio</string>
+  <string name="fm_dvdv" toBeTranslated="true">DVD-Video</string>
+  <string name="fm_br" toBeTranslated="true">Blu-ray</string>
+
+</resources>
